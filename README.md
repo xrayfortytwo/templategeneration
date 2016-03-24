@@ -8,22 +8,22 @@
 
 ## Usage
 ### Install with go on your system
-    `go get github.com/xrayfortytwo/templategeneration`
+    go get github.com/xrayfortytwo/templategeneration
 
 ### Execution
-    go to `/templategeneration` directory
+    go to /templategeneration directory
     
-    `go run main.go (-filename=<path to input *.g4 file> | -destination="<path to store output file>")*`
+    go run main.go (-filename=<path to input *.g4 file> | -destination="<path to store output file>")*
     
 ### Flags
-    `-filename=<path to input *.g4 file>`   
-    `-destination=<path to output dir>`
+    -filename=<path to input *.g4 file>   
+    -destination=<path to output dir>
     DEFALUT:
         filename=./input/fsml.g4
         destination=./tmp/template.temp
 
 ### TODOs and flaws
-    * Only Object Grammars are excepted (no `|` in grammar rule)
+    * Only Object Grammars are excepted (no | in grammar rule)
     * for a good result in json representation elements in rules need to be distinct. 
       Unless a bit more manual enhancement of the grammar is needed.
 
