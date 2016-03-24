@@ -1,4 +1,4 @@
-# Non of this is nearly ready, just a to learn new cool things.
+# Non of this is nearly ready, just to learn new cool things.
 
 ## Motivation
 
@@ -23,9 +23,11 @@
         destination=./tmp/template.temp
 
 ### TODOs and flaws
-    * Only Object Grammars are excepted (no | in grammar rule)
-    * for a good result in json representation elements in rules need to be distinct. 
-      Unless a bit more manual enhancement of the grammar is needed.
+
+    - Only Object Grammars are excepted (no | in grammar rule)
+    - For a good result in json representation elements in rules need to be distinct. 
+    Unless a bit more manual enhancement of the grammar is needed.
 
 ### Related work
-    * "A Formal Way from Text to Code Templates" by Guido Wachsmuth (Humboldt-Universität zu Berlin)
+
+    - "A Formal Way from Text to Code Templates" by Guido Wachsmuth (Humboldt-Universität zu Berlin)
