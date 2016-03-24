@@ -1,8 +1,8 @@
 package adaption
 
 import (
-	"gitbucked.org/sle/genjson"
-	"gitbucked.org/sle/utils"
+	"github.com/templategeneration/genjson"
+	"github.com/templategeneration/utils"
 	"text/template"
 )
 
