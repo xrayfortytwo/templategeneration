@@ -1,0 +1,18 @@
+{{define "rule" }}{{.Token0}}({{.Token1}}) ::= "{{end}} 
+
+{{define "token"}}{{.Token0}}{{end}}
+
+{{define "mayKey"}} <{{.Token0}}.{{.Token1}}> {{end}}
+
+{{define "kleene"}} <{{.Token0}}.{{.Token1}} : { i | <{{.Token1}}(i)> }> {{end}}
+
+{{define "obMay"}}<if({{.Token0}}.{{.Token1}})>{{end}}
+
+{{define "multiMay"}}<if( {{range .TList }} {{.Token0}}.{{.}} || {{end}}  )> {{end}}
+
+{{define "cbMay"}}<endif>{{end}}
+
+{{define "mayBoolTok"}}<if({{.Token0}}.{{.Token1}})><{{.Token0}}.{{.Token1}}> <endif> {{end}}
+
+{{define "endRule"}}"
+{{end}}
