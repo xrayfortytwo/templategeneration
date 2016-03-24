@@ -1,5 +1,10 @@
 package genjson
 
+/*
+   Generates the json representation for the grammar to fill the template
+   after marshalling
+*/
+
 import (
 	"encoding/json"
 	"log"

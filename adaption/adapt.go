@@ -1,5 +1,10 @@
 package adaption
 
+/*
+   This takes the read input and builds a list with Tokens
+   Goes back to a talk from Mr. Pike
+*/
+
 import (
 	"strings"
 	"unicode"
@@ -69,7 +74,7 @@ const (
 	regularExpre
 	endRule
 	plus
-	mult
+	mult //25
 	minus
 	multi
 	div

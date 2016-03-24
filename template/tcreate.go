@@ -1,5 +1,9 @@
 package template
 
+/*
+   Helper for template generation execution
+*/
+
 import (
 	"os"
 	"text/template"

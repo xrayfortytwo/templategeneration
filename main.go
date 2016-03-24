@@ -1,5 +1,9 @@
 package main
 
+/*
+   Main entry point of the application, with flags
+*/
+
 import (
 	"flag"
 	"gitbucked.org/sle/adaption"

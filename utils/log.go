@@ -1,5 +1,9 @@
 package util
 
+/*
+   Helper for logging
+*/
+
 import (
 	"log"
 	"os"

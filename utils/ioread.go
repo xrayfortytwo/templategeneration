@@ -1,5 +1,9 @@
 package util
 
+/*
+   Helper lib. for in/output actions
+*/
+
 import (
 	"io/ioutil"
 	"log"

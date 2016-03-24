@@ -1,5 +1,10 @@
 package adaption
 
+/*
+   Takes the list of tokens per rule from the scanner
+   Determines the kind of rules and calls the template for execution
+*/
+
 import (
 	"github.com/templategeneration/genjson"
 	"github.com/templategeneration/utils"
@@ -82,7 +87,6 @@ func (g GenTemp) printKleene(tList []Token) {
 }
 
 func printMorphen(tList []Token) {
-	//fmt.Println("Morphen: ", tList, i)
 	var i string
 	for j, t := range tList {
 		switch t.kind {
