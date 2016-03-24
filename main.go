@@ -6,9 +6,9 @@ package main
 
 import (
 	"flag"
-	"gitbucked.org/sle/adaption"
-	"gitbucked.org/sle/genjson"
-	"gitbucked.org/sle/utils"
+	"gitbucked.org/templategeneration/genjson"
+	"gitbucked.org/templategeneration/utils"
+	"github.com/templategeneration/adaption"
 )
 
 const (
