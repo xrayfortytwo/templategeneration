@@ -11,7 +11,7 @@
     go get github.com/xrayfortytwo/templategeneration
 
 ### Execution
-    go to /templategeneration directory
+    go to "/templategeneration" directory
     
     go run main.go (-filename=<path to input *.g4 file> | -destination="<path to store output file>")*
     
@@ -24,7 +24,7 @@
 
 ### TODOs and flaws
 
-    - Only Object Grammars are excepted (no | in grammar rule)
+    - Only object grammars are excepted (no "|" in grammar rule)
     - For a good result in json representation elements in rules need to be distinct. 
     Unless a bit more manual enhancement of the grammar is needed.
 
