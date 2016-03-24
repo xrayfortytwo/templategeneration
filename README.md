@@ -1,31 +1,33 @@
-# Non of this is nearly ready, just a to learn new cool things.
+# Non of this is nearly ready, just to learn new cool things.
 
 ## Motivation
 
 ## Architecture and dataflow
 
-![dataflow](https://github.com/xrayfortytwo/templategeneration/doc/flowdoku001.png)
+![dataflow](https://raw.githubusercontent.com/xrayfortytwo/templategeneration/master/doc/flowdoku001.png)
 
 ## Usage
 ### Install with go on your system
-    `go get github.com/xrayfortytwo/templategeneration`
+    go get github.com/xrayfortytwo/templategeneration
 
 ### Execution
-    go to `/templategeneration` directory
+    go to "/templategeneration" directory
     
-    `go run main.go (-filename=<path to input *.g4 file> | -destination="<path to store output file>")*`
+    go run main.go (-filename=<path to input *.g4 file> | -destination="<path to store output file>")*
     
 ### Flags
-    `-filename=<path to input *.g4 file>`   
-    `-destination=<path to output dir>`
+    -filename=<path to input *.g4 file>   
+    -destination=<path to output dir>
     DEFALUT:
         filename=./input/fsml.g4
         destination=./tmp/template.temp
 
 ### TODOs and flaws
-    * Only Object Grammars are excepted (no `|` in grammar rule)
-    * for a good result in json representation elements in rules need to be distinct. 
-      Unless a bit more manual enhancement of the grammar is needed.
+
+    - Only object grammars are excepted (no "|" in grammar rule)
+    - For a good result in json representation elements in rules need to be distinct. 
+    Unless a bit more manual enhancement of the grammar is needed.
 
 ### Related work
-    * "A Formal Way from Text to Code Templates" by Guido Wachsmuth (Humboldt-Universität zu Berlin)
+
+    - "A Formal Way from Text to Code Templates" by Guido Wachsmuth (Humboldt-Universität zu Berlin)
