@@ -4,7 +4,7 @@
 
 ## Architecture and dataflow
 
-![dataflow](https://github.com/xrayfortytwo/templategeneration/doc/flowdoku001.png)
+![dataflow](https://raw.githubusercontent.com/xrayfortytwo/templategeneration/master/doc/flowdoku001.png)
 
 ## Usage
 ### Install with go on your system
