@@ -8,6 +8,7 @@ package adaption
 import (
 	"github.com/templategeneration/genjson"
 	"github.com/templategeneration/utils"
+	"log"
 	"text/template"
 )
 
@@ -67,6 +68,8 @@ func (g GenTemp) printKleene(tList []Token) {
 			tmayToken(i, t.ident)
 		case keyTok:
 			tToken(t.ident)
+		case mayKey:
+			tboolToken(i, t.ident)
 		case mayOBrack:
 			tmayToken(i, t.ident)
 		case mayCBrack:
@@ -79,6 +82,7 @@ func (g GenTemp) printKleene(tList []Token) {
 			fileName = t.ident
 		default:
 			tmayToken(i, t.ident)
+			log.Println("--->", t.ident, t)
 			if i != t.ident {
 				g.Gj.Add(t.ident, i, 0)
 			}
@@ -199,8 +203,12 @@ func tKleene(r, k string) {
 	check(genTemplate("kleene", Input{Token0: r, Token1: k}))
 }
 
+func tMayKey(r, k string) {
+	check(genTemplate("mayKey", Input{Token0: r, Token1: k}))
+}
+
 func tboolToken(r, k string) {
-	check(genTemplate("mayTok", Input{Token0: r, Token1: k}))
+	check(genTemplate("mayBoolTok", Input{Token0: r, Token1: k}))
 }
 
 func tmayOB(t0, t1 string) {
