@@ -22,6 +22,10 @@ func CreateTemplate() {
 	err = t.ExecuteTemplate(os.Stdout, "rule", template1)
 }
 
+func CreateClassLayout() {
+
+}
+
 func check(err error) {
 	if err != nil {
 		panic(err)

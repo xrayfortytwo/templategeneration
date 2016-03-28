@@ -28,7 +28,7 @@ func main() {
 	util.Log.Println("INFO: Read: ", *fileName)
 	input := util.IOReadFile(*fileName)
 	var s = genjson.GenJson(destijson)
-	var t = &adaption.GenTemp{s}
+	var t = &adaption.GenTemp{Gj: s}
 	adaption.RunAdaption(&input, destitemp, t)
 	s.Decode()
 }

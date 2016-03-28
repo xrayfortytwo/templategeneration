@@ -9,6 +9,7 @@ import (
 	"github.com/templategeneration/genjson"
 	"github.com/templategeneration/utils"
 	"log"
+	"strings"
 	"text/template"
 )
 
@@ -25,6 +26,15 @@ type Input struct {
 
 type GenTemp struct {
 	Gj *genjson.Encoding
+}
+type PojoClass struct {
+	ClassName  string
+	ClassIdent []Var
+}
+
+type Var struct {
+	Type  string
+	Ident string
 }
 
 func (g GenTemp) PrintFunc(tList []Token, dest string) {
@@ -47,6 +57,7 @@ func (g GenTemp) PrintFunc(tList []Token, dest string) {
 
 func (g GenTemp) printKleene(tList []Token) {
 	var i string
+	p := &PojoClass{}
 	var m = make(map[string]interface{})
 	for _, t := range tList {
 		switch t.kind {
@@ -54,11 +65,13 @@ func (g GenTemp) printKleene(tList []Token) {
 			i = t.ident
 			g.Gj.Add(t.ident, "", 1)
 			tRule(t.ident, i)
+			p.ClassName = strings.Title(t.ident)
 			m[t.ident] = ""
 		case endRule:
 			tEndRule()
 		case kleTok:
 			tKleene(i, t.ident)
+			p.ClassIdent = append(p.ClassIdent, Var{"ArrayList<" + strings.Title(t.ident) + ">", t.ident})
 			g.Gj.Add(t.ident, i, 1)
 		case oBrack:
 			tToken(t.ident)
@@ -69,6 +82,7 @@ func (g GenTemp) printKleene(tList []Token) {
 		case keyTok:
 			tToken(t.ident)
 		case mayKey:
+			p.ClassIdent = append(p.ClassIdent, Var{"boolean", t.ident})
 			tboolToken(i, t.ident)
 		case mayOBrack:
 			tmayToken(i, t.ident)
@@ -85,9 +99,11 @@ func (g GenTemp) printKleene(tList []Token) {
 			log.Println("--->", t.ident, t)
 			if i != t.ident {
 				g.Gj.Add(t.ident, i, 0)
+				p.ClassIdent = append(p.ClassIdent, Var{"String", t.ident})
 			}
 		}
 	}
+	genClassTemplate(*p)
 }
 
 func printMorphen(tList []Token) {
@@ -139,11 +155,14 @@ func (g GenTemp) printLexer(tList []Token) {
 
 func (g GenTemp) printRule(tList []Token) {
 	var i string
+	p := &PojoClass{}
 	for j, t := range tList {
 		switch t.kind {
 		case ruleName: // rule :
 			i = t.ident
 			tRule(t.ident, i)
+			p.ClassName = strings.Title(t.ident)
+			//p.ClassIdent = append(p.ClassIdent, Var{"ArrayList<" + strings.Title(t.ident) + ">", t.ident})
 			g.Gj.Add(t.ident, "", 1)
 		case endRule: // ;
 			tEndRule()
@@ -170,10 +189,12 @@ func (g GenTemp) printRule(tList []Token) {
 		default:
 			tmayToken(i, t.ident)
 			if i != t.ident {
+				p.ClassIdent = append(p.ClassIdent, Var{"String", t.ident})
 				g.Gj.Add(t.ident, i, 0)
 			}
 		}
 	}
+	genClassTemplate(*p)
 }
 
 func check(err error) {
@@ -242,4 +263,11 @@ func genTemplate(trule string, input Input) error {
 	check(err)
 	err = t.ExecuteTemplate(w, trule, input)
 	return err
+}
+
+func genClassTemplate(pojo PojoClass) {
+	tc := template.New("ClassTemp")
+	tc, err := tc.ParseFiles("template/classTempl.templ")
+	check(err)
+	err = tc.ExecuteTemplate(util.PrintJFile{pojo.ClassName}, "class", pojo)
 }
