@@ -96,7 +96,6 @@ func (g GenTemp) printKleene(tList []Token) {
 			fileName = t.ident
 		default:
 			tmayToken(i, t.ident)
-			log.Println("--->", t.ident, t)
 			if i != t.ident {
 				g.Gj.Add(t.ident, i, 0)
 				p.ClassIdent = append(p.ClassIdent, Var{"String", t.ident})
@@ -150,7 +149,9 @@ func printMorphen(tList []Token) {
 }
 
 func (g GenTemp) printLexer(tList []Token) {
-	// need this later
+	for _, t := range tList {
+		log.Println("--> ", t)
+	}
 }
 
 func (g GenTemp) printRule(tList []Token) {
@@ -162,7 +163,6 @@ func (g GenTemp) printRule(tList []Token) {
 			i = t.ident
 			tRule(t.ident, i)
 			p.ClassName = strings.Title(t.ident)
-			//p.ClassIdent = append(p.ClassIdent, Var{"ArrayList<" + strings.Title(t.ident) + ">", t.ident})
 			g.Gj.Add(t.ident, "", 1)
 		case endRule: // ;
 			tEndRule()

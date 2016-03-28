@@ -1,9 +1,9 @@
  public class Transition {
      
-        String event
+        String event;
      
-        String action
+        String action;
      
-        String stateid
+        String stateid;
     
 }

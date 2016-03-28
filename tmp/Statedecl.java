@@ -1,9 +1,9 @@
  public class Statedecl {
      
-        boolean initial
+        boolean initial;
      
-        String stateid
+        String stateid;
      
-        ArrayList<Transition> transition
+        ArrayList<Transition> transition;
     
 }
