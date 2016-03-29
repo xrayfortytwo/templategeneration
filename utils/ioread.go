@@ -17,13 +17,9 @@ type OutputUtil struct {
 
 func (o OutputUtil) Write(b []byte) (int, error) {
 	f, err := os.OpenFile(o.DestinationTemplate, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0600)
-	if err != nil {
-		panic(err)
-	}
+	check(err)
 	_, err = f.Write(b)
-	if err != nil {
-		panic(err)
-	}
+	check(err)
 	f.Close()
 	return -1, nil
 }
