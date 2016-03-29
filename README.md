@@ -24,8 +24,14 @@ So ultimately a template is created.
 ### Install with go on your system
     go get github.com/xrayfortytwo/templategeneration
 
-### Execution
-    go to "/templategeneration" directory
+### Makefile
+    cd to "/templategeneration" dir.
+    make test_run
+
+    This will execute generate the template and the POJO for fsml.g4
+
+### Go Execution
+    cd to "/templategeneration" directory
     
     go run main.go (-filename=<path to input *.g4 file> | -destination="<path to store output file>")*
     
