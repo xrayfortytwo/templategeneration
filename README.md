@@ -25,7 +25,7 @@ So ultimately a template is created.
     go get github.com/xrayfortytwo/templategeneration
 
 ### Makefile
-This will execute generate the template and the [POJO](https://github.com/xrayfortytwo/templategeneration/tree/master/tmp) for [fsml.g4](https://github.com/xrayfortytwo/templategeneration/blob/master/input/fsml.g4)
+This will generate the [template](https://github.com/xrayfortytwo/templategeneration/blob/master/tmp/temp.template) and the [POJO](https://github.com/xrayfortytwo/templategeneration/tree/master/tmp) for [fsml.g4](https://github.com/xrayfortytwo/templategeneration/blob/master/input/fsml.g4)
 
     cd to "/templategeneration" dir.
     make test_run
