@@ -28,7 +28,7 @@ So ultimately a template is created.
     cd to "/templategeneration" dir.
     make test_run
 
-    This will execute generate the template and the POJO for fsml.g4
+    This will execute generate the template and the [POJO](https://github.com/xrayfortytwo/templategeneration/tree/master/tmp) for [fsml.g4](https://github.com/xrayfortytwo/templategeneration/blob/master/input/fsml.g4)
 
 ### Go Execution
     cd to "/templategeneration" directory
