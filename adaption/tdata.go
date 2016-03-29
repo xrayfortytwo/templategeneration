@@ -8,7 +8,6 @@ package adaption
 import (
 	"github.com/templategeneration/genjson"
 	"github.com/templategeneration/utils"
-	"log"
 	"strings"
 	"text/template"
 )
@@ -149,9 +148,7 @@ func printMorphen(tList []Token) {
 }
 
 func (g GenTemp) printLexer(tList []Token) {
-	for _, t := range tList {
-		log.Println("--> ", t)
-	}
+	// needed later
 }
 
 func (g GenTemp) printRule(tList []Token) {
