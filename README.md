@@ -13,7 +13,7 @@ tokens in a antrl4 grammar.
 
 By extracting these rules it is possible to create a template for the language defined by the grammar.
 The meta-template, to create the output-template, consists of small templates for the different kinds of Tokens 
-(e.g 'keywords'), by executing the meta-templates a small part of the template is written into a buffer. 
+(e.g 'keywords', '+', token), by executing the meta-templates a small part of the template is written into a buffer. 
 So ultimately a template is created.
 
 ## Architecture and dataflow
@@ -25,14 +25,13 @@ So ultimately a template is created.
     go get github.com/xrayfortytwo/templategeneration
 
 ### Makefile
+This will execute generate the template and the [POJO](https://github.com/xrayfortytwo/templategeneration/tree/master/tmp) for [fsml.g4](https://github.com/xrayfortytwo/templategeneration/blob/master/input/fsml.g4)
+
     cd to "/templategeneration" dir.
     make test_run
 
-    This will execute generate the template and the [POJO](https://github.com/xrayfortytwo/templategeneration/tree/master/tmp) for [fsml.g4](https://github.com/xrayfortytwo/templategeneration/blob/master/input/fsml.g4)
-
 ### Go Execution
     cd to "/templategeneration" directory
-    
     go run main.go (-filename=<path to input *.g4 file> | -destination="<path to store output file>")*
     
 ### Flags
@@ -45,8 +44,6 @@ So ultimately a template is created.
 ### TODOs and flaws
 
     - Only object grammars are excepted (no "|" in grammar rule)
-    - For a good result in json representation elements in rules need to be distinct. 
-    Unless a bit more manual enhancement of the grammar is needed.
 
 ### Related work
 
