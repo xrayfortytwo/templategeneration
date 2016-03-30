@@ -9,7 +9,7 @@ These classes of rules are nonterminal rules, kleene rules, morphen rules and le
 Nonterminal rules are those who include nonterminals except kleene rules. However, kleene rules are rules who 
 contain tokens with a kleene star "*" applied, thus a list is needed to fill the template.
 Morphen rules are nonterminal rules without a defining rule. Finally there are some lexer rules who specify 
-tokens in a antrl4 grammar.
+tokens in an antrl4 grammar.
 
 By extracting these rules it is possible to create a template for the language defined by the grammar.
 The meta-template, to create the output-template, consists of small templates for the different kinds of Tokens 
