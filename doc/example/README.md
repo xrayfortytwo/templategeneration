@@ -38,3 +38,6 @@ state state_2 {
     event2_2 -> state_3 ; 
   } 
 ```
+
+
+[Some other examples](https://github.com/xrayfortytwo/templategeneration/tree/master/doc/example_output)
