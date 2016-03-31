@@ -27,7 +27,7 @@ More detailed overview:
 
 ## Usage
 ### Example
-[A small example is of the usage](https://github.com/xrayfortytwo/templategeneration/tree/master/doc/example)
+[A small example of the usage](https://github.com/xrayfortytwo/templategeneration/tree/master/doc/example)
 
 ### Install with go on your system
     go get github.com/xrayfortytwo/templategeneration
