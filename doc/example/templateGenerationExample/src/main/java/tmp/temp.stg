@@ -1,0 +1,6 @@
+fsm(fsm) ::= "<\n><fsm.statedecl:{z|<statedecl(z)>}><\n>"
+statedecl(statedecl) ::= "<\n><if(statedecl.initial)>initial <endif>state <statedecl.stateid> { <statedecl.transition:{z|<transition(z)>}><\n> } "
+transition(transition) ::= "<\n><transition.event><if(transition.action)> / <transition.action><endif><if(transition.stateid)> -> <transition.stateid><endif> ; "
+stateid(stateid) ::= "<\n><stateid.ID>"
+event(event) ::= "<\n><event.ID>"
+action(action) ::= "<\n><action.ID>"
