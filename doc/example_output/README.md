@@ -2,7 +2,7 @@
 
 ##Calculation "language":
 
-##Grammar:
+###Grammar:
 ```
 grammar Calc ;
 
@@ -22,7 +22,7 @@ OP : (*|+|-|) ;
 NUMBER : [0-9]+ ;
 
 ```
-##Template:
+###Template:
 
 ```
 calc(calc) ::= "<\n><calc.expre:{z|<expre(z)>}><\n>"
@@ -34,7 +34,7 @@ num2(num3) ::= "<\n><num3.ID>"
 ob(ob) ::= "<\n><ob.ID>"
 ```
 
-##Example classes:
+###Example classes:
 
 ```java
 package tmp;
@@ -64,7 +64,7 @@ public class Calc {
 
 ##Hello example:
 
-##Grammar:
+###Grammar:
 
 ```
 grammar Hello ;
@@ -78,7 +78,7 @@ surname : NAME ;
 NAME : [a-z]+ ;
 ```
 
-##Template:
+###Template:
 
 ```
 subscript(subscript) ::= "<\n><subscript.descript:{z|<descript(z)>}><\n>"
@@ -87,7 +87,7 @@ company(company) ::= "<\n><company.ID>"
 surname(surname) ::= "<\n><surname.ID>"
 ```
 
-##Example classes:
+###Example classes:
 ```java
 public class Subscript {
 
@@ -108,4 +108,3 @@ public class Descript {
 
 }
 ```
-
