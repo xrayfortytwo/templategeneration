@@ -89,6 +89,7 @@ surname(surname) ::= "<\n><surname.ID>"
 
 ###Generated classes:
 ```java
+package tmp;
 public class Subscript {
 
     ArrayList<Descript> descript;
