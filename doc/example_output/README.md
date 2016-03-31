@@ -1,6 +1,6 @@
 #Other examples:
 
-##Calculation "language":
+##Calculation language example:
 
 ###Grammar:
 ```
@@ -22,7 +22,7 @@ OP : (*|+|-|) ;
 NUMBER : [0-9]+ ;
 
 ```
-###Template:
+###Generated Template:
 
 ```
 calc(calc) ::= "<\n><calc.expre:{z|<expre(z)>}><\n>"
@@ -34,7 +34,7 @@ num2(num3) ::= "<\n><num3.ID>"
 ob(ob) ::= "<\n><ob.ID>"
 ```
 
-###Example classes:
+###Generated classes:
 
 ```java
 package tmp;
@@ -62,7 +62,7 @@ public class Calc {
 }
 ```
 
-##Hello example:
+##Hello language example:
 
 ###Grammar:
 
@@ -78,7 +78,7 @@ surname : NAME ;
 NAME : [a-z]+ ;
 ```
 
-###Template:
+###Generated template:
 
 ```
 subscript(subscript) ::= "<\n><subscript.descript:{z|<descript(z)>}><\n>"
@@ -87,7 +87,7 @@ company(company) ::= "<\n><company.ID>"
 surname(surname) ::= "<\n><surname.ID>"
 ```
 
-###Example classes:
+###Generated classes:
 ```java
 public class Subscript {
 
