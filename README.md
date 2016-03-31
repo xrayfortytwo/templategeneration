@@ -33,7 +33,7 @@ More detailed overview:
     go get github.com/xrayfortytwo/templategeneration
 
 ### Makefile
-This will generate the [template](https://github.com/xrayfortytwo/templategeneration/blob/master/tmp/temp.template) and the [POJO](https://github.com/xrayfortytwo/templategeneration/tree/master/tmp) for [fsml.g4](https://github.com/xrayfortytwo/templategeneration/blob/master/input/fsml.g4)
+This will generate the [template](https://github.com/xrayfortytwo/templategeneration/blob/master/tmp/temp.stg) and the [POJO](https://github.com/xrayfortytwo/templategeneration/tree/master/tmp) for [fsml.g4](https://github.com/xrayfortytwo/templategeneration/blob/master/input/fsml.g4)
 
     cd to "/templategeneration" dir.
     make test_run
