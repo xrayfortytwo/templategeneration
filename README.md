@@ -18,7 +18,11 @@ So ultimately a template is created.
 
 ## Architecture and dataflow
 
+Simple overview:
 ![dataflow](https://raw.githubusercontent.com/xrayfortytwo/templategeneration/master/doc/flowdoku001.png)
+
+More detailed overview:
+![dataflow](https://raw.githubusercontent.com/xrayfortytwo/templategeneration/master/doc/flowdoku002.png)
 
 ## Usage
 ### Install with go on your system

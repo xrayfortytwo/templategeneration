@@ -15,7 +15,7 @@ import (
 
 const (
 	DEFAULT_FILE         = "/input/fsml.g4"
-	DESTINATION_TEMPLATE = "/tmp/temp.template"
+	DESTINATION_TEMPLATE = "/tmp/temp.stg"
 	DESTINATION_JSON     = "/tmp/jsondata.json"
 )
 
