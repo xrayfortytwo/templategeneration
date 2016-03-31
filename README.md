@@ -1,4 +1,5 @@
-# Non of this is nearly ready, just to learn new cool things.
+#Generating templates from a simple antlr4 grammar
+Non of this is nearly ready, just to learn new cool things.
 
 ## Motivation
    

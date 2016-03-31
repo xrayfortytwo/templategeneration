@@ -16,7 +16,7 @@ type OutputUtil struct {
 }
 
 func (o OutputUtil) Write(b []byte) (int, error) {
-	f, err := os.OpenFile(o.DestinationTemplate, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0600)
+	f, err := os.OpenFile(o.DestinationTemplate, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0666)
 	check(err)
 	_, err = f.Write(b)
 	check(err)
@@ -38,6 +38,7 @@ func CleanUp(args ...string) {
 func IOReadFile(filepath string) []byte {
 	input, err := ioutil.ReadFile(filepath)
 	check(err)
+	os.Mkdir("tmp", 0777)
 	return input
 }
 

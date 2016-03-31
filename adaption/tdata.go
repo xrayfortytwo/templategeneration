@@ -7,6 +7,7 @@ package adaption
 
 import (
 	"github.com/templategeneration/genjson"
+	tFiles "github.com/templategeneration/template"
 	"github.com/templategeneration/utils"
 	"strings"
 	"text/template"
@@ -255,16 +256,14 @@ func genMultiTemplate(i string, t []string) {
 }
 
 func genTemplate(trule string, input Input) error {
-	var t = template.New("template")
-	t, err := t.ParseFiles("template/template.templ")
+	tc, err := template.New("template").Parse(tFiles.TEMPLATE)
 	check(err)
-	err = t.ExecuteTemplate(w, trule, input)
+	err = tc.ExecuteTemplate(w, trule, input)
 	return err
 }
 
 func genClassTemplate(pojo PojoClass) {
-	tc := template.New("ClassTemp")
-	tc, err := tc.ParseFiles("template/classTempl.templ")
+	tc, err := template.New("ClassTemp").Parse(tFiles.CLASS_TEMPLATE)
 	check(err)
 	err = tc.ExecuteTemplate(util.PrintJFile{pojo.ClassName}, "class", pojo)
 }

@@ -1,9 +1,9 @@
- public class Statedecl {
-     
-        boolean initial;
-     
-        String stateid;
-     
-        ArrayList<Transition> transition;
-    
+ 
+package tmp;
+
+public class Statedecl {
+ 
+    boolean initial; 
+    String stateid; 
+    ArrayList<Transition> transition;
 }
