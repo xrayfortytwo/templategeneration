@@ -16,6 +16,7 @@ expre : num0 op num1 (op num2)? '=' num3 ;
 num0 : NUMBER ;
 num1 : NUMBER ;
 num2 : NUMBER ;
+num3 : NUMBER ;
 ob : OP ;
 OP : (*|+|-|) ;
 NUMBER : [0-9]+ ;
@@ -29,6 +30,7 @@ expre(expre) ::= "<\n><expre.num0><expre.op><expre.num1><if(expre.num2)><expre.o
 num0(num0) ::= "<\n><num0.ID>"
 num1(num1) ::= "<\n><num1.ID>"
 num2(num2) ::= "<\n><num2.ID>"
+num2(num3) ::= "<\n><num3.ID>"
 ob(ob) ::= "<\n><ob.ID>"
 ```
 
