@@ -45,7 +45,7 @@ This will generate the [template](https://github.com/xrayfortytwo/templategenera
 ### Flags
     -filename=<path to input *.g4 file>   
     -destination=<path to output dir>
-    DEFALUT:
+    DEFAULT:
         filename=./input/fsml.g4
         destination=./tmp/template.temp
 
