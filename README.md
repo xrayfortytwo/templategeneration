@@ -1,5 +1,5 @@
 #Generating templates from a simple antlr4 grammar
-Non of this is nearly ready, just to learn new cool things.
+Non of this is ready, just to learn new cool things.
 
 ## Motivation
    
@@ -8,7 +8,7 @@ To achieve this the grammar is scanned and divided into different types of rules
 
 These classes of rules are nonterminal rules, kleene rules, morphen rules and lexer rules.
 Nonterminal rules are those who include nonterminals except kleene rules. However, kleene rules are rules who 
-contain tokens with a kleene star "*" applied, thus a list is needed to fill the template.
+contain tokens with a kleene star `*` applied, thus a list is needed to fill the template.
 Morphen rules are nonterminal rules without a defining rule. Finally there are some lexer rules who specify 
 tokens in an antrl4 grammar.
 
@@ -26,6 +26,9 @@ More detailed overview:
 ![dataflow](https://raw.githubusercontent.com/xrayfortytwo/templategeneration/master/doc/flowdoku02.png)
 
 ## Usage
+### Example
+[A small example is of the usage](https://github.com/xrayfortytwo/templategeneration/tree/master/doc/example)
+
 ### Install with go on your system
     go get github.com/xrayfortytwo/templategeneration
 
