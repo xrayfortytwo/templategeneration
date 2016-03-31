@@ -1,4 +1,4 @@
-#Generating templates from a simple antlr4 grammar
+#Generating templates from a plainly antlr4 grammar
 
 ## Motivation
    
