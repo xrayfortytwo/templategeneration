@@ -22,8 +22,8 @@ const (
 {{end}}"
 `
 
-	CLASS_TEMPLATE = `{{define "class"}} 
-package tmp;
+	CLASS_TEMPLATE = `
+{{define "class"}}package tmp;
 
 public class {{.ClassName}} {
 {{range .ClassIdent}} 

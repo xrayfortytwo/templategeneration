@@ -1,4 +1,3 @@
- 
 package tmp;
 
 public class Transition {
