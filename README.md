@@ -1,5 +1,4 @@
 #Generating templates from a simple antlr4 grammar
-Non of this is ready, just to learn new cool things.
 
 ## Motivation
    
